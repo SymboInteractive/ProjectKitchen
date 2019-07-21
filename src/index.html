@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kitchen</title>  
+    <link rel="stylesheet" href="index.css">
+    
+  <body>
+      <div id="loadingScreen">
+          <img src="./assets/img/loadingImg.jpg" alt="logo" id="logoImage" class="rotating">
+          <img src="./assets/img/symbo.png" alt="" id="symboImage"> 
+        </div>
+        
+     <canvas id="renderCanvas" touch-action="none"></canvas>
+     <iframe src="https://my.matterport.com/show/?m=Gi5VoUTbWnN" id="iframeScene"></iframe>
+     
+
+     <div class="uiSwitch" id="uiToggle"></div>
+    <!-- <div  id="fsbtn"></div> -->
+ 
+     <div class="menu_scene ui" id="menuSceneUI">
+        <div class="sceneItem menu_scene_activeSelection" id="menu_scene__scene1">SELECT SCENE1</div>
+        <div class="sceneItem" id="menu_scene__scene2">SELECT SCENE2</div>
+        <div class="sceneItem" id="menu_scene__vtour">3D Virtual Tour</div>
+       
+      </div>
+      <div class="menu_selection ui">
+        <ul>
+          <li class="menu_selection_activeSelection selectionMenuItem" id="island_color_selection"><h3>Island Color</h3></li>
+          <li class="selectionMenuItem" id="island_countertop_selection"><h3>Island Countertop Material</h3></li>
+          <li class="selectionMenuItem" id="rangehood_selection"><h3>Rangehood Selection</h3></li>
+        </ul>
+      </div>
+      <div class="menu_material ui">
+        <div class="materialMenu" id="islandMenu">
+          <img src="assets/icons/island/whiteCream.png" alt="whiteCream" class="islandItem islandMenuItemSelected" id="whiteCream">
+          <img src="assets/icons/island/PumpkinCream.png" alt="PumpkinCream" class="islandItem" id="pumpkinCream">
+          <img src="assets/icons/island/EgyptianPyramid.png" alt="EgyptianPyramid" class="islandItem" id="egyptianPyramid">
+          <img src="assets/icons/island/SugarMaple.png" alt="SugarMaple" class="islandItem" id="sugarMaple">
+          <img src="assets/icons/island/Speedboat.png" alt="Speedboat" class="islandItem" id="speedboat">
+          <img src="assets/icons/island/YachtBlue.png" alt="YachtBlue" class="islandItem" id="yachtBlue">
+          <img src="assets/icons/island/JayBird.png" alt="JayBird" class="islandItem" id="jayBird">
+          <img src="assets/icons/island/VenusTeal.png" alt="VenusTeal" class="islandItem" id="venusTeal">
+          <img src="assets/icons/island/Dragonfly.png" alt="Dragonfly" class="islandItem" id="dragonfly">
+          <img src="assets/icons/island/PineBrook.png" alt="PineBrook" class="islandItem" id="pineBrook">
+        </div>
+
+        
+
+
+        <div class="materialMenu " id="islandCountertopMenu">
+          <img src="assets/icons/countertop/blackLime.jpg" alt="blackLime" class="countertopItem materialMenuItemSelected" id="blackLimeCountertop">
+          <img src="assets/icons/countertop/whiteLime.jpg" alt="whiteLime" class="countertopItem" id="whiteLimeCountertop">
+        </div>
+
+
+        <div class="materialMenu " id="rangehoodMenu">
+          <img src="assets/icons/rangehood/napa1.png" alt="rangehood1" class="rangehoodItem rangehoodMenuItemSelected" id="napa1">
+          <img src="assets/icons/rangehood/napa2.png" alt="rangehood2" class="rangehoodItem" id="napa2">
+          <img src="assets/icons/rangehood/napa3.png" alt="rangehood3" class="rangehoodItem" id="napa3">
+        </div>
+
+      </div>
+      <div class="menu_function ui">
+        <div class="functionMenuWrapper">
+            <div class="slidecontainer">
+              <p>OVEN HEIGHT ADJUSTMENT</p>
+              <input autocomplete="off" type="range" min="1" max="7" value="4" class="slider" id="myRange">
+            </div>
+            <div class="switcherContainer" id="switcher_container">
+                <p>SHOW/HIDE SHELF#1</p>
+                <label class="switch">                 
+                  <input autocomplete="off"type="checkbox" id="checkboxButton1" checked>
+                  <span class="switcher round"></span>              
+                </label>
+                <p>SHOW/HIDE SHELF#2</p>
+                <label class="switch">                  
+                    <input autocomplete="off" type="checkbox" id="checkboxButton2" checked>
+                    <span class="switcher round"></span>              
+                  </label>
+            </div>
+          </div>
+      </div>
+
+   
+
+    <script>      
+        var PleaseRotateOptions = {
+          startOnPageLoad: true,
+          onHide: function(){},
+          onShow: function(){},
+          forcePortrait: false,
+          message: "Please Rotate Your Device",
+          subMessage: "",
+          allowClickBypass: false,
+          onlyMobile: true,
+          zIndex: 1000,
+          iconNode: null
+      };
+      </script>
+    
+
+    
+    <script src="rotate.js"></script>  
+    
+  
+  </body>
+</html>
